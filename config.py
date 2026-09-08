@@ -14,11 +14,13 @@ MAX_TOOL_ITERATIONS = int(os.getenv("MAX_TOOL_ITERATIONS", "4"))  # anti boucle 
 DB_PATH = os.getenv("DB_PATH", "./agent_memory.sqlite3")
 DEFAULT_USER_ID = os.getenv("DEFAULT_USER_ID", "default")
 
-SYSTEM_PROMPT = """You are a concise and helpful text-based assistant.
+LANGUAGE = "English"
+
+SYSTEM_PROMPT = f"""You are a concise and helpful text-based assistant.
 
 You have access to several tools. To use a tool, respond ONLY with a valid
 JSON object on a single line, with no additional text, using the following format:
-{"tool": "tool_name", "args": {...}}
+{{"tool": "tool_name", "args": {{...}}}}
 
 
 Available tools:
@@ -28,8 +30,9 @@ Available tools:
 - wiki_search(query, top_n): searches Wikipedia for definitions and facts.
 - current_time(): returns the current time.
 
-If you do not need any tool, respond directly in English using natural sentences,
+If you do not need any tool, respond directly in {LANGUAGE} using natural sentences,
 without JSON and without markdown.
 
 Never make up a tool result: always wait for the actual tool result before
 providing your final answer."""
+

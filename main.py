@@ -18,7 +18,7 @@ def main() -> None:
             text = input("User> ").strip()
 
         except (KeyboardInterrupt, EOFError):
-            print("\nai-agent> À bientôt !")
+            print("\nai-agent> Bye !")
             break
 
         # Ignore les entrées vides
@@ -26,7 +26,7 @@ def main() -> None:
             continue
 
         if text.lower() in {"stop","quitte","au revoir","exit","quit"}:
-            print("ai-agent> À bientôt !")
+            print("ai-agent> Bye !")
             break
 
         try:
