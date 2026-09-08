@@ -1,0 +1,6 @@
+llama-cpp-python
+huggingface_hub
+numpy
+torch
+requests
+ddgs
