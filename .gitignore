@@ -10,4 +10,4 @@ models/
 # OS
 .DS_Store
 
-.sqlite3
+*.sqlite3
