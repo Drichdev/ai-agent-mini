@@ -14,7 +14,7 @@ MAX_TOOL_ITERATIONS = int(os.getenv("MAX_TOOL_ITERATIONS", "4"))  # anti boucle 
 DB_PATH = os.getenv("DB_PATH", "./agent_memory.sqlite3")
 DEFAULT_USER_ID = os.getenv("DEFAULT_USER_ID", "default")
 
-LANGUAGE = "English"
+LANGUAGE = "English" # or French
 
 SYSTEM_PROMPT = f"""You are a concise and helpful text-based assistant.
 
